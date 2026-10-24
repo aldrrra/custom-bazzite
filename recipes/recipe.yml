@@ -20,7 +20,5 @@ modules:
     install:
       packages:
         - brave-origin
-        - firefox
-    
 
   - type: signing # Sets up cosign.pub key inside the image
