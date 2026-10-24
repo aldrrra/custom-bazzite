@@ -20,5 +20,8 @@ modules:
     install:
       packages:
         - brave-origin
+    remove:
+      packages:
+        - webapp-manager
 
   - type: signing # Sets up cosign.pub key inside the image
