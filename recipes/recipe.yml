@@ -12,17 +12,21 @@ image-version: stable
 modules:
   - type: dnf
     repos:
-      # Add 
+      # Add Brave and VSCodium repos
       files:
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+        - vscodium.repo
       keys:
         - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+        - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
     install:
       packages:
         - brave-origin
+        - codium
     remove:
       packages:
         - webapp-manager
+        - code
 
   # Sets up cosign.pub key inside the image
   - type: signing 
