@@ -1,18 +1,18 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 name: custom-bazzite
-# description will be included in the image's metadata
-description: Bazzite-DX KDE with Brave and Firefox as native packages.
+description: Bazzite-DX KDE customized for my needs.
 
-# builds on bazzite-dx:stable
+# Builds on bazzite-dx:stable
 base-image: ghcr.io/ublue-os/bazzite-dx
 image-version: stable
 
-# module configuration
+# Module configuration
 modules:
   - type: dnf
     repos:
+      # Add 
       files:
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       keys:
@@ -24,4 +24,5 @@ modules:
       packages:
         - webapp-manager
 
-  - type: signing # Sets up cosign.pub key inside the image
+  # Sets up cosign.pub key inside the image
+  - type: signing 
