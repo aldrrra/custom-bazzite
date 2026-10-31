@@ -27,6 +27,9 @@ modules:
       packages:
         - webapp-manager
         - code
+        - twitter-twemoji-fonts
+        - google-noto-sans-cjk-fonts
+        - nerd-fonts
 
   # Sets up cosign.pub key inside the image
   - type: signing 
