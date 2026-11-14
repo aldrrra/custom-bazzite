@@ -16,7 +16,6 @@ modules:
         - firefox
     remove:
       packages:
-        - webapp-manager
         - twitter-twemoji-fonts
         - google-noto-sans-cjk-fonts
         - nerd-fonts
